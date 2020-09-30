@@ -1,0 +1,411 @@
+if not game.CoreGui:FindFirstChild("ColorChar") then
+local newevent = Instance.new("BindableEvent",game.CoreGui)
+newevent.Name = "ColorChar"
+newevent.Event:Connect(function(player,skin,toColor)
+    if player ~= nil then
+     if skin == "BrickBattle" and player:FindFirstChild("Body Colors") then
+            player["Body Colors"].TorsoColor3 = toColor
+        elseif skin == "Scarecrow" then
+            player["Body Colors"].TorsoColor3 = toColor
+            player["Body Colors"].LeftArmColor3 = toColor
+            player["Body Colors"].RightArmColor3 = toColor
+            player["Body Colors"].LeftLegColor3 = toColor
+            player["Body Colors"].RightLegColor3 = toColor
+            if player:FindFirstChild("Scarecrow Hat") and player:FindFirstChild("Body Colors") then
+             player["Scarecrow Hat"].Handle.Mesh.VertexColor = Vector3.new(toColor.R,toColor.G,toColor3.B)
+            end
+        elseif skin == "Cow" and player:FindFirstChild("Body Colors") then
+            player["Body Colors"].TorsoColor3 = toColor
+            player["Body Colors"].LeftArmColor3 = toColor
+            player["Body Colors"].RightArmColor3 = toColor
+            player["Body Colors"].LeftLegColor3 = toColor
+           player["Body Colors"].RightLegColor3 = toColor
+            player["Body Colors"].HeadColor3 = toColor
+            if player:FindFirstChild("FakeHead") then
+            player.FakeHead.Color = toColor
+            end
+            if player:FindFirstChild("MadCow") then
+             player["MadCow"].Handle.Color = toColor
+             end
+        elseif skin == "Material Man" and player:FindFirstChild("Body Colors") then
+            player["Body Colors"].TorsoColor3 = toColor
+            player["Body Colors"].LeftArmColor3 = toColor
+            player["Body Colors"].RightArmColor3 = toColor
+            player["Body Colors"].LeftLegColor3 = toColor
+            player["Body Colors"].RightLegColor3 = toColor
+            if player:FindFirstChild("WeirdHead") then
+            player.WeirdHead.Handle.Color = toColor
+            end
+        elseif skin == "Froggy" and player:FindFirstChild("Body Colors") then
+            player["Body Colors"].TorsoColor3 = toColor
+            player["Body Colors"].LeftArmColor3 = toColor
+            player["Body Colors"].RightArmColor3 = toColor
+            player["Body Colors"].LeftLegColor3 = toColor
+            player["Body Colors"].RightLegColor3 = toColor
+            if player:FindFirstChild("Funnylittlefrog") then
+            player.Funnylittlefrog.Handle.Color = toColor
+            end
+        elseif skin == "Bloxy Delinquent" and player:FindFirstChild("Body Colors") then
+            player["Body Colors"].TorsoColor3 = toColor
+            player["Body Colors"].LeftArmColor3 = toColor
+            player["Body Colors"].RightArmColor3 = toColor
+            player["Body Colors"].LeftLegColor3 = toColor
+            player["Body Colors"].RightLegColor3 = toColor
+            player["Body Colors"].HeadColor3 = toColor
+            if player:FindFirstChild("FakeHead") then
+            player.FakeHead.Color = toColor
+            end
+            if player:FindFirstChild("Wings") then
+            player.Wings.Handle.Color = toColor
+            end
+            if player:FindFirstChild("Cap") then
+            player.Cap.Handle.Color = toColor
+            end
+            if player:FindFirstChild("NerdHair") then
+            player.NerdHair.Handle.Color = toColor
+            end
+            if player:FindFirstChild("Particle Area") then
+                player["Particle Area"].Sparkles.Color = ColorSequence.new(Color3.new(toColor.R,toColor.G,toColor.B))
+            end
+        elseif skin == "Delinquent" and player:FindFirstChild("Body Colors") then
+            player["Body Colors"].TorsoColor3 = toColor
+            player["Body Colors"].LeftArmColor3 = toColor
+            player["Body Colors"].RightArmColor3 = toColor
+            player["Body Colors"].LeftLegColor3 = toColor
+            player["Body Colors"].RightLegColor3 = toColor
+            if player:FindFirstChild("Cap") then
+            player.Cap.Handle.Color = toColor
+            end
+            elseif skin == "Bigfoot" and player:FindFirstChild("Body Colors") then
+            player["Body Colors"].TorsoColor3 = toColor
+            player["Body Colors"].LeftArmColor3 = toColor
+            player["Body Colors"].RightArmColor3 = toColor
+            player["Body Colors"].LeftLegColor3 = toColor
+            player["Body Colors"].RightLegColor3 = toColor
+            if player:FindFirstChild("HatAttachment") then
+            player.HatAttachment.Handle.Color = toColor
+            end
+            elseif skin == "Primus The Knight" and player:FindFirstChild("Body Colors") then
+                player["Body Colors"].TorsoColor3 = toColor
+                player["Body Colors"].LeftArmColor3 = toColor
+                player["Body Colors"].RightArmColor3 = toColor
+                player["Body Colors"].LeftLegColor3 = toColor
+                player["Body Colors"].RightLegColor3 = toColor
+                for i,acc in pairs(player:GetChildren()) do
+                    if acc:IsA("Accessory") then
+                        if acc ~= nil then
+                            for i,acc2 in pairs(acc:GetChildren()) do
+                                if acc2 ~= nil then
+                                    acc2.Color = toColor
+                                end
+                            end
+                        end
+                    end
+                end
+            elseif skin == "Sans" and player:FindFirstChild("Body Colors") then
+            player["Body Colors"].HeadColor3 = BrickColor.new("White")
+             player["Body Colors"].TorsoColor3 = toColor
+            player["Body Colors"].LeftArmColor3 = toColor
+            player["Body Colors"].RightArmColor3 = toColor
+            player["Body Colors"].LeftLegColor3 = toColor
+            player["Body Colors"].RightLegColor3 = toColor
+            if player:FindFirstChildOfClass("Shirt") then
+                player:FindFirstChildOfClass("Shirt").ShirtTemplate = "rbxassetid://3414703860"
+            end
+            if player:FindFirstChildOfClass("Pants") then
+                player:FindFirstChildOfClass("Pants").PantsTemplate = "http://www.roblox.com/asset/?id=4502481884"
+            end
+            if player:FindFirstChild("Cap") then
+                player.Cap.Handle.Transparency = 1
+            end
+            if player:FindFirstChild("FakeHead") then
+                player.FakeHead.Transparency = 1
+            end
+            elseif skin == "Flanker" and player:FindFirstChild("Body Colors") then
+            player["Body Colors"].TorsoColor3 = toColor
+            player["Body Colors"].LeftArmColor3 = toColor
+            player["Body Colors"].RightArmColor3 = toColor
+            player["Body Colors"].LeftLegColor3 = toColor
+            player["Body Colors"].RightLegColor3 = toColor
+            if player:FindFirstChild("Accessory") then
+            player.Accessory.Handle.Mesh.VertexColor = Vector3.new(toColor.R,toColor.G,toColor.B)
+            end
+            elseif skin == "Paintballer" and player:FindFirstChild("Body Colors") then
+            player["Body Colors"].TorsoColor3 = toColor
+            player["Body Colors"].LeftArmColor3 = toColor
+            player["Body Colors"].RightArmColor3 = toColor
+            player["Body Colors"].LeftLegColor3 = toColor
+            player["Body Colors"].RightLegColor3 = toColor
+            if player:FindFirstChild("RedPaintballMask") then
+                player.RedPaintballMask.Handle.Mesh.VertexColor = Vector3.new(toColor.R,toColor.G,toColor.B)
+            end
+            elseif skin == "Pizza Boy" and player:FindFirstChild("Body Colors") then
+            player["Body Colors"].TorsoColor3 = toColor
+            player["Body Colors"].LeftArmColor3 = toColor
+            player["Body Colors"].RightArmColor3 = toColor
+            player["Body Colors"].LeftLegColor3 = toColor
+            player["Body Colors"].RightLegColor3 = toColor
+            if player:FindFirstChild("Visor") then
+                player.Visor.Handle.Color = toColor
+            end
+            elseif skin == "Red Panda" and player:FindFirstChild("Body Colors") then
+           player["Body Colors"].TorsoColor3 = toColor
+            player["Body Colors"].LeftArmColor3 = toColor
+            player["Body Colors"].RightArmColor3 = toColor
+            player["Body Colors"].LeftLegColor3 = toColor
+            player["Body Colors"].RightLegColor3 = toColor
+            if player:FindFirstChild("Hood") then
+                player.Hood.Handle.Mesh.VertexColor = Vector3.new(toColor.R,toColor.G,toColor.B)
+            end
+            elseif skin == "Janitor" and player:FindFirstChild("Body Colors") then
+            player["Body Colors"].TorsoColor3 = toColor
+            player["Body Colors"].LeftArmColor3 = toColor
+            player["Body Colors"].RightArmColor3 = toColor
+            player["Body Colors"].LeftLegColor3 = toColor
+            player["Body Colors"].RightLegColor3 = toColor
+            if player:FindFirstChild("Cap") then
+                player.Cap.Handle.Color = toColor
+            end
+            elseif skin == "Chupacabra" and player:FindFirstChild("Body Colors") then
+            player["Body Colors"].TorsoColor3 = toColor
+            player["Body Colors"].LeftArmColor3 = toColor
+            player["Body Colors"].RightArmColor3 = toColor
+            player["Body Colors"].LeftLegColor3 = toColor
+            player["Body Colors"].RightLegColor3 = toColor
+            if player:FindFirstChild("Chupa") then
+                player.Chupa.Handle.Color = toColor
+            end
+            elseif skin == "Recruit" and player:FindFirstChild("Body Colors") then
+            player["Body Colors"].TorsoColor3 = toColor
+            player["Body Colors"].LeftArmColor3 = toColor
+            player["Body Colors"].RightArmColor3 = toColor
+            player["Body Colors"].LeftLegColor3 = toColor
+            player["Body Colors"].RightLegColor3 = toColor
+            if player:FindFirstChild("BasicHelm") then
+                player.BasicHelm.Handle.Color = toColor
+            end
+            elseif skin == "Grunt" and player:FindFirstChild("Body Colors") then
+            player["Body Colors"].TorsoColor3 = toColor
+            player["Body Colors"].LeftArmColor3 = toColor
+            player["Body Colors"].RightArmColor3 = toColor
+            player["Body Colors"].LeftLegColor3 = toColor
+            player["Body Colors"].RightLegColor3 = toColor
+            if player:FindFirstChild("B&WMilitaryHat") then
+                player["B&WMilitaryHat"].Handle.Mesh.VertexColor = Vector3.new(toColor.R,toColor.G,toColor.B)
+            end
+            elseif skin == "Beret" and player:FindFirstChild("Body Colors") then
+            player["Body Colors"].TorsoColor3 = toColor
+            player["Body Colors"].LeftArmColor3 = toColor
+            player["Body Colors"].RightArmColor3 = toColor
+            player["Body Colors"].LeftLegColor3 = toColor
+            player["Body Colors"].RightLegColor3 = toColor
+            if player:FindFirstChild("Red Devil ") then
+                player["Red Devil "].Handle.Color = toColor
+            end
+            elseif skin == "Deserted Beret" and player:FindFirstChild("Body Colors") then
+            player["Body Colors"].TorsoColor3 = toColor
+            player["Body Colors"].LeftArmColor3 = toColor
+            player["Body Colors"].RightArmColor3 = toColor
+            player["Body Colors"].LeftLegColor3 = toColor
+            player["Body Colors"].RightLegColor3 = toColor
+            if player:FindFirstChild("Green Beret") then
+                player["Green Beret"].Handle.Color = toColor
+            end
+            elseif skin == "Gladiator" and player:FindFirstChild("Body Colors") then
+            player["Body Colors"].TorsoColor3 = toColor
+            player["Body Colors"].LeftArmColor3 = toColor
+            player["Body Colors"].RightArmColor3 = toColor
+            player["Body Colors"].LeftLegColor3 = toColor
+            player["Body Colors"].RightLegColor3 = toColor
+            if player:FindFirstChild("Accessory") then
+                player.Accessory.Handle.Mesh.VertexColor = Vector3.new(toColor.R,toColor.G,toColor.B)
+            end
+            elseif skin == "Builder" and player:FindFirstChild("Body Colors") then
+            player["Body Colors"].TorsoColor3 = toColor
+            player["Body Colors"].LeftArmColor3 = toColor
+            player["Body Colors"].RightArmColor3 = toColor
+            player["Body Colors"].LeftLegColor3 = toColor
+            player["Body Colors"].RightLegColor3 = toColor
+            if player:FindFirstChild("TBCHardHat") then
+                player.TBCHardHat.Handle.Mesh.VertexColor = Vector3.new(toColor.R,toColor.G,toColor.B)
+            end
+            elseif skin == "Chef" and player:FindFirstChild("Body Colors") then
+            player["Body Colors"].TorsoColor3 = toColor
+            player["Body Colors"].LeftArmColor3 = toColor
+            player["Body Colors"].RightArmColor3 = toColor
+            player["Body Colors"].LeftLegColor3 = toColor
+            player["Body Colors"].RightLegColor3 = toColor
+            if player:FindFirstChild("Chefhat") then
+                player.Chefhat.Handle.Mesh.VertexColor = Vector3.new(toColor.R,toColor.G,toColor.B)
+            end
+            elseif skin == "Firefighter" and player:FindFirstChild("Body Colors") then
+            player["Body Colors"].TorsoColor3 = toColor
+            player["Body Colors"].LeftArmColor3 = toColor
+            player["Body Colors"].RightArmColor3 = toColor
+            player["Body Colors"].LeftLegColor3 = toColor
+            player["Body Colors"].RightLegColor3 = toColor
+            if player:FindFirstChild("FirefighterHat") then
+                player.FirefighterHat.Handle.Color = toColor
+            end
+            elseif skin == "The Boi" and player:FindFirstChild("Body Colors") then
+            player["Body Colors"].TorsoColor3 = toColor
+            player["Body Colors"].LeftArmColor3 = toColor
+            player["Body Colors"].RightArmColor3 = toColor
+            player["Body Colors"].LeftLegColor3 = toColor
+            player["Body Colors"].RightLegColor3 = toColor
+            if player:FindFirstChild("Aviator") then
+                player.Aviator.Handle.Mesh.VertexColor = Vector3.new(toColor.R,toColor.G,toColor.B)
+            end
+            elseif skin == "Gal" and player:FindFirstChild("Body Colors") then
+            player["Body Colors"].TorsoColor3 = toColor
+            player["Body Colors"].LeftArmColor3 = toColor
+            player["Body Colors"].RightArmColor3 = toColor
+            player["Body Colors"].LeftLegColor3 = toColor
+            player["Body Colors"].RightLegColor3 = toColor
+            if player:FindFirstChild("Gals_Hat") then
+                player.Gals_Hat.Handle.Mesh.VertexColor = Vector3.new(toColor.R,toColor.G,toColor.B)
+            end
+            if player:FindFirstChild("Gal Scarf") then
+                player["Gal Scarf"].Handle.Mesh.VertexColor = Vector3.new(toColor.R,toColor.G,toColor.B)
+            end
+            if player:FindFirstChild("Skirt") then
+                player.Skirt.Handle.Color = Color3.new(toColor.R*.75,toColor.G*.75,toColor.B*.75)
+            end
+            if player:FindFirstChild("FakeHead") then
+                if player.FakeHead:FindFirstChild("face") then
+                    player.FakeHead.face.Color3 = Color3.fromRGB(toColor.R,toColor.G,toColor.B)
+                end
+            end
+            elseif skin == "Fire Golem" and player:FindFirstChild("Body Colors") then
+                player["Body Colors"].HeadColor3= toColor
+            player["Body Colors"].TorsoColor3 = toColor
+            player["Body Colors"].LeftArmColor3 = toColor
+            player["Body Colors"].RightArmColor3 = toColor
+            player["Body Colors"].LeftLegColor3 = toColor
+            player["Body Colors"].RightLegColor3 = toColor
+                for i,acc in pairs(player:GetChildren()) do
+                    if acc:IsA("Accessory") then
+                        if acc ~= nil then
+                            for i,acc2 in pairs(acc:GetChildren()) do
+                                if acc2 ~= nil then
+                                    acc2.Color = toColor
+                                end
+                            end
+                        end
+                    end
+                end
+                if player:FindFirstChild("FakeHead") then
+                player.FakeHead.Color = toColor
+                end
+            elseif skin == "Labourer" and player:FindFirstChild("Body Colors") then
+            player["Body Colors"].TorsoColor3 = toColor
+            player["Body Colors"].LeftArmColor3 = toColor
+            player["Body Colors"].RightArmColor3 = toColor
+            player["Body Colors"].LeftLegColor3 = toColor
+            player["Body Colors"].RightLegColor3 = toColor
+            if player:FindFirstChild("Workers Cap") then
+                player["Workers Cap"].Handle.Mesh.VertexColor = Vector3.new(toColor.R,toColor.G,toColor.B)
+            end
+            elseif skin == "Communicator" and player:FindFirstChild("Body Colors") then
+            player["Body Colors"].TorsoColor3 = toColor
+            player["Body Colors"].LeftArmColor3 = toColor
+            player["Body Colors"].RightArmColor3 = toColor
+            player["Body Colors"].LeftLegColor3 = toColor
+            player["Body Colors"].RightLegColor3 = toColor
+            if player:FindFirstChild("Sunglasses1Lens") then
+                player["Sunglasses1Lens"].Handle.Color = toColor
+            end
+            elseif skin == "Anarchist" and player:FindFirstChild("Body Colors") then
+            player["Body Colors"].TorsoColor3 = toColor
+            player["Body Colors"].LeftArmColor3 = toColor
+            player["Body Colors"].RightArmColor3 = toColor
+            player["Body Colors"].LeftLegColor3 = toColor
+            player["Body Colors"].RightLegColor3 = toColor
+            if player:FindFirstChild("HoodOfTheLonelyRaven") then
+                player["HoodOfTheLonelyRaven"].Handle.Color = toColor
+            end
+            elseif skin == "Baseball Star" and player:FindFirstChild("Body Colors") then
+            player["Body Colors"].TorsoColor3 = toColor
+            player["Body Colors"].LeftArmColor3 = toColor
+            player["Body Colors"].RightArmColor3 = toColor
+            player["Body Colors"].LeftLegColor3 = toColor
+            player["Body Colors"].RightLegColor3 = toColor
+            if player:FindFirstChild("Baseball") then
+                player["Baseball"].Handle.Mesh.VertexColor = Vector3.new(toColor.R,toColor.G,toColor.B)
+            end
+            elseif skin == "Dez" and player:FindFirstChild("Body Colors") then
+            player["Body Colors"].TorsoColor3 = Color3.new(1,1,1)
+            player["Body Colors"].LeftArmColor3 = Color3.new(1,1,1)
+            player["Body Colors"].RightArmColor3 = Color3.new(1,1,1)
+            player["Body Colors"].LeftLegColor3 = Color3.new(1,1,1)
+            player["Body Colors"].RightLegColor3 = Color3.new(1,1,1)
+            player["Body Colors"].HeadColor3 = Color3.new(1,1,1)
+            if player:FindFirstChild("FakeHead") then
+            player.FakeHead.Color = Color3.new(1,1,1)
+            if player.FakeHead:FindFirstChild("face") then
+                player.FakeHead.face.Texture = "http://www.roblox.com/asset/?id=7074780"
+                end
+                if player.FakeHead:FindFirstChild("Mesh") then
+                player.FakeHead.Mesh.MeshId = "rbxassetid://5560742512"
+                player.FakeHead.Mesh.Scale = Vector3.new(1,1,1)
+                end
+            end
+            if player:FindFirstChild("Head") then
+                player.Head.Transparency = 0
+                if player:FindFirstChild("_Shades") then
+                else
+                local shades = Instance.new("Part",player)
+                local weld = Instance.new("Weld",player)
+                local mesh = Instance.new("SpecialMesh",shades)
+                shades.Name = "_Shades"
+                shades.CanCollide = false
+                shades.Massless = true
+                shades.Size = Vector3.new(0.05,0.05,0.05)
+                weld.Name = "_ShadesWeld"
+                weld.Part0 = player.Head
+                weld.Part1 = shades
+                mesh.MeshId = "http://www.roblox.com/asset/?id=116436358"
+                mesh.TextureId = "http://www.roblox.com/asset/?id=376188793"
+                mesh.Offset = Vector3.new(0, 0.14, -0.145)
+                end
+                if player.Head:FindFirstChild("Mesh") then
+                    player.Head.Mesh.MeshId = "rbxassetid://5560742512"
+                end
+            end
+            if player:FindFirstChild("Cap") then
+                player.Cap.Handle.Transparency = 1
+            end
+            if player:FindFirstChild("NerdHair") then
+                player.NerdHair.Handle.Transparency = 1
+            end
+            if player:FindFirstChild("Shirt") then
+                player.Shirt:Destroy()
+            end
+            if player:FindFirstChild("Pants") then
+                player.Pants:Destroy()
+            end
+            else
+                if player:FindFirstChild("Body Colors") then
+           player["Body Colors"].TorsoColor3 = toColor
+            player["Body Colors"].LeftArmColor3 = toColor
+            player["Body Colors"].RightArmColor3 = toColor
+            player["Body Colors"].LeftLegColor3 = toColor
+            player["Body Colors"].RightLegColor3 = toColor
+            end
+            end
+           if player:FindFirstChild("UpperTorso") then 
+    if player.UpperTorso:FindFirstChild("TeamLeader") then
+        if player.UpperTorso.TeamLeader:FindFirstChild("Rays") then
+            player.UpperTorso.TeamLeader.Rays.Color = ColorSequence.new(toColor)
+        end
+        if player.UpperTorso.TeamLeader:FindFirstChild("Glow") then
+            player.UpperTorso.TeamLeader.Glow.Color = ColorSequence.new(toColor)
+        end
+        if player.UpperTorso.TeamLeader:FindFirstChild("Ray") then
+            player.UpperTorso.TeamLeader.Ray.Color = ColorSequence.new(toColor)
+        end
+    end
+    end
+    end
+end)
+end
