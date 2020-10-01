@@ -157,6 +157,9 @@ newevent.Event:Connect(function(player,skin,toColor)
             if player:FindFirstChild("Hood") then
                 player.Hood.Handle.Mesh.VertexColor = Vector3.new(toColor.R,toColor.G,toColor.B)
             end
+            if player:FindFirstChild("Tail") then
+                player.Tail.Handle.Mesh.VertexColor = Vector3.new(toColor.R,toColor.G,toColor.B)
+            end
             elseif skin == "Janitor" and player:FindFirstChild("Body Colors") then
             player["Body Colors"].TorsoColor3 = toColor
             player["Body Colors"].LeftArmColor3 = toColor
